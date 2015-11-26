@@ -1,0 +1,327 @@
+@import "setup";
+
+@mixin fontSize($fontSize){
+	font-size: $fontSize * 1px;
+	font-size: ($fontSize / 10) * 1rem;
+}
+
+// Spacefy's colours!
+$blue: #00ABDA;
+$orange: #E06D27;
+$grey: #2c3e50;
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include fontSize(16);
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+img {
+	width: 100%;
+}
+
+// Labels help keep the code accessible to screen readers, but we can keep them off the screen for aesthetics (normally I wouldn't use !important but i this case I made an exception)
+.hide {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+.hero {
+	background-color: #ECECEC; //fallback
+	background: url(../assets/newyork.jpeg) no-repeat;
+	background-size: cover;
+	background-position: 75% 90%;
+	height: 100vh;
+}
+
+header {
+	height: 13vh;
+	padding: 20px 0 0 30px;
+	.logo {
+		width: 12%;
+	}
+}
+
+form {
+	width: 45%;
+	margin: 0 auto;
+	padding: 0 50px 40px 50px;
+	background: rgba(246, 246, 246, 0.65);
+	border-radius: 10px;
+	input {
+		border-radius: 5px;
+		border-style: none;
+		padding: 10px;
+	}
+	input[type=submit]{
+		background-color: $orange;
+		color: white;
+		text-transform: uppercase;
+		@include fontSize(16);
+		padding: 15px;
+		margin: 30px auto 0;
+		display: block;
+		width: 30%;
+		border: 2px solid transparent;
+		transition: border 0.5s ease;
+		&:hover {
+			border: 2px solid white;
+		}
+	}
+	h1 {
+		@include fontSize(35);
+		font-family: "raleway", sans-serif;
+		font-weight: 300;
+		letter-spacing: 2;
+		color: $blue;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 40px 0 15px 0;
+		margin: 0;
+	}
+	p {
+		text-align: center;
+		color: $grey;
+		margin: 0 30px 15px 30px;
+		line-height: 1.5;
+	}
+	label {
+		border-radius: 10px;
+	}
+	.inputs {
+		width: 90%;
+		margin: 0 auto;
+		.name {
+			padding-left: 10px;
+			padding-right: 0;
+			width: calc(50% - 22px);
+			margin: 10px;
+		}
+		.full {
+			width: calc(100% - 20px);
+			margin: 10px;
+		}
+	}
+}
+
+.error {
+	color: red;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	position: relative;
+	top: -8px;
+	i {
+		padding-right: 5px;
+	}
+}
+
+.success {
+	color: green;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+
+
+// Media Queries
+
+@media all and (max-width: 1165px) {
+	form {
+		width: 65%;
+	}
+}
+
+@media all and (max-width: 1050px) {
+	header .logo {
+		width: 15%;
+	}
+}
+
+@media all and (max-width: 950px) {
+	header .logo {
+		width: 17%;
+	}
+}
+
+@media all and (max-width: 770px) {
+	.hero {
+		background-position: 30% 90%;
+		height: 100vh;
+	}
+	form {
+		width: 75%;
+	}
+}
+
+@media all and (max-width: 670px) {
+	.hero {
+		height: 200vh;
+		background-attachment:fixed;
+	}
+
+@media all and (max-width: 664px) {
+	header .logo {
+		width: 22%;
+	}
+	form {
+		padding: 0 20px 40px 20px;
+	}
+}
+
+
+}
+@media all and (max-width: 590px) {
+	form {
+		padding: 0 10px 40px 10px;
+	}
+}
+
+@media all and (max-width: 562px) {
+	form {
+		width: 85%;
+		padding: 0 10px 40px 10px;
+	}
+}
+
+@media all and (max-width: 495px) {
+	header .logo {
+		width: 25%;
+	}
+	form {
+		@include fontSize(14);
+	}
+}
+
+@media all and (max-width: 448px) {
+	.hero {
+		background-position: 10% 50%;
+	}
+	header .logo {
+		width: 25%;
+	}
+	form {
+		h1 {
+			@include fontSize(22);
+		}
+		p {
+			@include fontSize(14);
+		}
+		.inputs {
+			.name {
+				margin: 5px;
+				width: calc(50% - 12px);
+			}
+			.full {
+				width: calc(100% - 12px);
+				margin: 5px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 421px) {
+	input {
+		padding: 5px;
+	}
+	form {
+		.inputs {
+			.name {
+				padding-left: 5px;
+			}
+			.full {
+				padding-left: 5px;
+			}
+		}
+		input[type=submit]{
+			@include fontSize(14);
+			padding: 15px;
+			width: 40%;
+		}
+	}
+}
+
+@media all and (max-width: 406px) {
+	form {
+		@include fontSize(12);
+	}
+}
+
+@media all and (max-width: 359px) {
+	header .logo {
+		width: 35%;
+	}
+	.hero {
+		background-position: 1% 50%;
+	}
+	form {
+		width: 90%;
+		padding: 0 5px 40px 5px;
+	}
+}
+
+@media all and (max-width: 326px) {
+	header {
+		padding: 14px 0 0 15px;
+		.logo {
+			width: 45%;
+		}
+	}
+	form {
+		p {
+			margin: 0 5px 30px 5px; 
+		}
+		.inputs {
+			width: 100%;
+			.name {
+				width: calc(100% - 12px);
+			}
+		}	
+		.error {
+			top: -15px;
+		}
+	}
+}
+
+@media all and (max-width: 280px) {
+	form {
+		width: 100%;
+	}
+}
+
+
+@media all and (max-width: 250px) {
+	header {
+		padding: 14px 0 0 10px;
+		.logo {
+			width: 50%;
+		}
+	}
+}	
+
+@media all and (max-width: 200px) {
+	.hero {
+		background-position: 1% 50%;
+	}
+	form {
+		h1 {
+			@include fontSize(18);
+		}
+		p {
+			margin: 0 5px 30px 5px; 
+		}
+		.inputs {
+			input[type=submit]{
+				width: 50%;
+			}	
+		}
+	}
+}

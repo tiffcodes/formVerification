@@ -1,0 +1,357 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+img {
+  width: 100%; }
+
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important; }
+
+.hero {
+  background-color: #ECECEC;
+  background: url(../assets/newyork.jpeg) no-repeat;
+  background-size: cover;
+  background-position: 75% 90%;
+  height: 100vh; }
+
+header {
+  height: 13vh;
+  padding: 20px 0 0 30px; }
+  header .logo {
+    width: 12%; }
+
+form {
+  width: 45%;
+  margin: 0 auto;
+  padding: 0 50px 40px 50px;
+  background: rgba(246, 246, 246, 0.65);
+  border-radius: 10px; }
+  form input {
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px; }
+  form input[type=submit] {
+    background-color: #E06D27;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding: 15px;
+    margin: 30px auto 0;
+    display: block;
+    width: 30%;
+    border: 2px solid transparent;
+    transition: border 0.5s ease; }
+    form input[type=submit]:hover {
+      border: 2px solid white; }
+  form h1 {
+    font-size: 35px;
+    font-size: 3.5rem;
+    font-family: "raleway", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2;
+    color: #00ABDA;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0 15px 0;
+    margin: 0; }
+  form p {
+    text-align: center;
+    color: #2c3e50;
+    margin: 0 30px 15px 30px;
+    line-height: 1.5; }
+  form label {
+    border-radius: 10px; }
+  form .inputs {
+    width: 90%;
+    margin: 0 auto; }
+    form .inputs .name {
+      padding-left: 10px;
+      padding-right: 0;
+      width: calc(50% - 22px);
+      margin: 10px; }
+    form .inputs .full {
+      width: calc(100% - 20px);
+      margin: 10px; }
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  position: relative;
+  top: -8px; }
+  .error i {
+    padding-right: 5px; }
+
+.success {
+  color: green;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: bold; }
+
+@media all and (max-width: 1165px) {
+  form {
+    width: 65%; } }
+
+@media all and (max-width: 1050px) {
+  header .logo {
+    width: 15%; } }
+
+@media all and (max-width: 950px) {
+  header .logo {
+    width: 17%; } }
+
+@media all and (max-width: 770px) {
+  .hero {
+    background-position: 30% 90%;
+    height: 100vh; }
+  form {
+    width: 75%; } }
+
+@media all and (max-width: 670px) {
+  .hero {
+    height: 200vh;
+    background-attachment: fixed; } }
+
+@media all and (max-width: 670px) and (max-width: 664px) {
+  header .logo {
+    width: 22%; }
+  form {
+    padding: 0 20px 40px 20px; } }
+
+@media all and (max-width: 590px) {
+  form {
+    padding: 0 10px 40px 10px; } }
+
+@media all and (max-width: 562px) {
+  form {
+    width: 85%;
+    padding: 0 10px 40px 10px; } }
+
+@media all and (max-width: 495px) {
+  header .logo {
+    width: 25%; }
+  form {
+    font-size: 14px;
+    font-size: 1.4rem; } }
+
+@media all and (max-width: 448px) {
+  .hero {
+    background-position: 10% 50%; }
+  header .logo {
+    width: 25%; }
+  form h1 {
+    font-size: 22px;
+    font-size: 2.2rem; }
+  form p {
+    font-size: 14px;
+    font-size: 1.4rem; }
+  form .inputs .name {
+    margin: 5px;
+    width: calc(50% - 12px); }
+  form .inputs .full {
+    width: calc(100% - 12px);
+    margin: 5px; } }
+
+@media all and (max-width: 421px) {
+  input {
+    padding: 5px; }
+  form .inputs .name {
+    padding-left: 5px; }
+  form .inputs .full {
+    padding-left: 5px; }
+  form input[type=submit] {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 15px;
+    width: 40%; } }
+
+@media all and (max-width: 406px) {
+  form {
+    font-size: 12px;
+    font-size: 1.2rem; } }
+
+@media all and (max-width: 359px) {
+  header .logo {
+    width: 35%; }
+  .hero {
+    background-position: 1% 50%; }
+  form {
+    width: 90%;
+    padding: 0 5px 40px 5px; } }
+
+@media all and (max-width: 326px) {
+  header {
+    padding: 14px 0 0 15px; }
+    header .logo {
+      width: 45%; }
+  form p {
+    margin: 0 5px 30px 5px; }
+  form .inputs {
+    width: 100%; }
+    form .inputs .name {
+      width: calc(100% - 12px); }
+  form .error {
+    top: -15px; } }
+
+@media all and (max-width: 280px) {
+  form {
+    width: 100%; } }
+
+@media all and (max-width: 250px) {
+  header {
+    padding: 14px 0 0 10px; }
+    header .logo {
+      width: 50%; } }
+
+@media all and (max-width: 200px) {
+  .hero {
+    background-position: 1% 50%; }
+  form h1 {
+    font-size: 18px;
+    font-size: 1.8rem; }
+  form p {
+    margin: 0 5px 30px 5px; }
+  form .inputs input[type=submit] {
+    width: 50%; } }
